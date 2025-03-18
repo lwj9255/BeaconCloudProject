@@ -6,6 +6,9 @@ import org.hibernate.validator.constraints.Range;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+/**
+ * 接收请求信息
+ */
 @Data
 public class SingleSendForm {
     /** 客户的apikey */

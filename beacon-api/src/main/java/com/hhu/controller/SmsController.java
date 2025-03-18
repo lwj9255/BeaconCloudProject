@@ -17,8 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class SmsController {
 
+    // produces指定响应的媒体类型（Accept）
     @PostMapping(value = "/single_send",produces = "application/json;charset=utf-8")
-    public ResultVO singleSend(@RequestBody @Validated SingleSendForm singleSendForm, BindingResult bindingResult){
+    public ResultVO singleSend(@RequestBody @Validated SingleSendForm singleSendForm, // @Validated对绑定到 Java 对象的请求数据进行验证
+                               BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             String msg = bindingResult.getFieldError().getDefaultMessage();
             log.info("【接口模块-单条短信Controller】 参数不合法，msg="+msg);

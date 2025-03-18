@@ -2,6 +2,9 @@ package com.hhu.vo;
 
 import lombok.Data;
 
+/**
+ * 响应信息
+ */
 @Data
 public class ResultVO {
     private Integer code;
